@@ -25,3 +25,8 @@
 2. Reportar a Wix Abuse: abuse@wix.com
 3. Reset de contraseña si se dio click
 4. Regla Sentinel abajo
+
+## Referencias MITRE ATT&CK
+- T1566.002 Phishing: Spearphishing Link: https://attack.mitre.org/techniques/T1566/002/
+- T1078 Valid Accounts: https://attack.mitre.org/techniques/T1078/
+- T1585.001 Establish Accounts: Social Media Accounts: https://attack.mitre.org/techniques/T1585/001/
