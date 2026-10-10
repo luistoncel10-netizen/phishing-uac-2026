@@ -1,0 +1,6 @@
+# IoCs Phishing UAC 2026-04-25
+URL: hxxps://cuentainstituciona5[.]wixsite[.]com/login
+Dominio Typosquat: cuentainstituciona5.wixsite.com
+Legitimo: login.microsoftonline.com
+Asunto: Importante: Verificacion requerida para tu cuenta institucional
+Remitente: [Agregar el correo real que te llego]
