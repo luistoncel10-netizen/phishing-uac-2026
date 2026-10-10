@@ -1,0 +1,23 @@
+// DETECCION PHISHING UAC - 2026-04-25
+// MITRE: T1566.002 - Phishing Link
+// Autor: luistoncel10-netizen
+
+// 1. Detecta el correo phishing entrante
+EmailEvents
+| where Timestamp > ago(7d)
+| where SenderFromAddress contains "canate" or Subject contains "Verificacion requerida para tu cuenta institucional"
+| where ThreatTypes has "Phish" or ConfidenceLevel == "High"
+| project Timestamp, SenderFromAddress, RecipientEmailAddress, Subject, ThreatTypes
+
+// 2. Detecta clicks al dominio malicioso (typosquat wixsite)
+UrlClickEvents
+| where Timestamp > ago(7d)
+| where Url contains "cuentainstituciona5.wixsite.com"
+| project Timestamp, AccountUpn, Url, ActionType, IsClickedThrough
+
+// 3. Alerta combinada para Sentinel
+let MaliciousDomain = "cuentainstituciona5.wixsite.com";
+EmailUrlInfo
+| where UrlDomain == MaliciousDomain
+| join EmailEvents on NetworkMessageId
+| project Timestamp, SenderFromAddress, RecipientEmailAddress, UrlDomain, Url
