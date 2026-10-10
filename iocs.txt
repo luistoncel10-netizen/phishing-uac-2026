@@ -3,4 +3,5 @@ URL: hxxps://cuentainstituciona5[.]wixsite[.]com/login
 Dominio Typosquat: cuentainstituciona5.wixsite.com
 Legitimo: login.microsoftonline.com
 Asunto: Importante: Verificacion requerida para tu cuenta institucional
-Remitente: [Agregar el correo real que te llego]
+Remitente: [michael.canate@uac.edu.co] suplantacion de soporte UAC
+Recomendacion: Bloquear dominio en Proxy / Defender
